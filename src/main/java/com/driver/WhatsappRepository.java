@@ -70,9 +70,9 @@ public class WhatsappRepository {
     public int createMessage(String content){
         int id=getMessageId();
         int current=id++;
-        Message m=new Message(current,content,new Date());
+        Message m=new Message(current,content);
         setMessageId(current);
-        return getMessageId();
+        return m.getId();
     }
 
     //4.
